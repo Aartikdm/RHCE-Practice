@@ -1,0 +1,5 @@
+[dev]
+serverb.lab.example.com
+
+[prod]
+workstation.lab.example.com

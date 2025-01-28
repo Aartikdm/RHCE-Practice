@@ -1,0 +1,11 @@
+---
+- name: reset root password
+  hosts: all
+  vars_files: 
+    - root_password.yml
+  tasks:
+    - name: reset root password
+      ansible.builtin.user:
+        user: root
+        state: present
+        password: "{{ root_pass | password_hash('sha512') }}"
